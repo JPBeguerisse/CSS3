@@ -1,0 +1,275 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+
+header{
+    background-color: rgb(243, 249, 250);
+    padding: 10px;
+}
+
+header img{
+    /* CENTRER L'IMAGE */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*****************/
+}
+
+#recherche_conteneur{
+    margin-top: 10px;
+}
+
+#recherche_conteneur form{
+    display: flex;
+}
+
+#rechercheInput{
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#ok_recherche{
+    padding: 10px;
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#d7ebf7, #f3f7f8, #d7ebf7);
+}
+
+nav ul li{
+    list-style: none;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: solid 4px rgb(3, 101, 158);
+    font-size: 26px;
+    height: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(43, 150, 238);
+}
+
+
+.sous-menu{
+    display: none;
+    position: relative;
+}
+
+.sous-menu ul li{
+    position: absolute;
+}
+
+/*  AFFICHER LES SOUS MENMU LORSQU'ON  PASSE LA SOURIS  */
+nav > ul li:hover .sous-menu{
+    display: block;
+}
+
+.sous-menu li{
+    border: none;
+    width: 100%;
+}
+
+.container{
+    margin: 0;
+}
+
+.bg-blue{
+    background-color: rgb(16, 145, 219);
+    color: rgb(83, 192, 255);
+}
+
+.bg-blue p{
+    color: white;
+}
+
+.home{
+    display: flex;
+}
+
+.home li{
+    padding: 0.5rem;
+    list-style: none;
+    font-size: 1.6rem;
+    color: #93b3c8;
+}
+
+.home a{
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(43, 150, 238);
+}
+
+/*              MAIN            */
+
+main,
+.astuces,
+.actuality{
+    border-radius: 2rem;
+    background-color: #f3f7f8;
+    margin-bottom: 1rem;
+
+}
+
+main h1,
+.astuces h3,
+.actuality h3{
+    background-color: rgb(3, 101, 158);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+main h5{
+    color: #93b3c8;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.main-container{
+    padding: 1rem;
+}
+
+
+main a{
+    text-decoration: none;
+    color: rgb(43, 150, 238);
+    font-weight: 600;
+
+}
+
+main li, 
+.astuces li,
+.actuality li{
+    list-style: none;
+}
+
+main ul {
+    padding: 0;
+    padding-top: 1rem;
+}
+
+.astuces a,
+.actuality a{
+    text-decoration: none;
+    color: black;
+}
+
+.astuces ul,
+.actuality ul{
+    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+.all{
+    text-align: right;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.all-astuces a{
+    color: rgb(16, 145, 219);
+}
+
+.all-actuality a{
+    color: brown;
+}
+
+.actuality h3{
+    background-color: brown;
+}
+
+.actuality span{
+    color: brown;
+    font-weight: 500;
+}
+
+.actuality li{
+    margin-bottom: 0.5rem;
+}
+/*          FOOTER      */
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.target{
+    background-color: rgb(0, 55, 119);
+    text-align: center;
+    padding: 1rem;
+}
+
+.target a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+@media screen and (min-width: 1024px){
+    header img{
+        /* CENTRER L'IMAGE SUR LE COTE */
+        display: inline;
+        /*****************/
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #rechercheInput{
+        flex: 1;
+        width: 200px;
+    }
+    
+    /**** MENU SUR UNE LIGNE*/
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    nav ul li{
+        font-size: 16px;
+        width: 100%; /*SUPPRIME LES MARGES ENTRE LES SPACE AROUND*/
+        margin: 1px;
+    }
+
+    /*          MAIN        */
+    .main-container{
+        display: flex;
+    }
+    
+    .main-item{
+        padding-right: 2rem;
+    }
+    
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    section main{
+        grid-column: 1/3;
+    }
+
+    section aside{
+        grid-column: 3;
+    }
+}
